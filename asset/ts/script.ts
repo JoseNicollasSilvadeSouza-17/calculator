@@ -1,18 +1,17 @@
-import { add, substract, multiply, div, divInt, remainder } from "./operations";
+import { add, substract, multiply, div, divInt, remainder } from "./operations.js";
 
 const number1 = document.querySelector("#number1") as HTMLInputElement;
 const number2 = document.querySelector("#number2") as HTMLInputElement;
 const calculatorBtn = document.querySelector("#calculator") as HTMLButtonElement;
 const output = document.querySelector("output") as HTMLOutputElement;
 
-const operations = document.querySelector("input[name='operations']:checked") as HTMLInputElement;
-
-let valueOperations = operations.value;
 let resultad: number = 0;
 
 calculatorBtn.addEventListener("click", (event) => {
 	event.preventDefault();
 
+	const operations = document.querySelector("input[name='operations']:checked") as HTMLInputElement;
+	let valueOperations = operations.value;
 	let num1: number = number1.valueAsNumber;
 	let num2: number = number2.valueAsNumber;
 
