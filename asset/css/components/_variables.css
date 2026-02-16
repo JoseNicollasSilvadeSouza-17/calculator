@@ -1,0 +1,10 @@
+:root {
+  --bg: #0f0f0f;
+  --card: #1a1a1a;
+  --accent: #6b7280;
+  --accent-hover: #4b5563;
+  --text: #f3f4f6;
+  --muted: #9ca3af;
+  --danger: #dc2626;
+  --radius: 12px;
+}

@@ -3,9 +3,9 @@ const number1 = document.querySelector("#number1");
 const number2 = document.querySelector("#number2");
 const calculatorBtn = document.querySelector("#calculator");
 const output = document.querySelector("output");
+const mainContainer = document.querySelector('.calculator');
 let resultad = 0;
-calculatorBtn.addEventListener("click", (event) => {
-    event.preventDefault();
+function handleCalculated() {
     const operations = document.querySelector("input[name='operations']:checked");
     let valueOperations = operations.value;
     let num1 = number1.valueAsNumber;
@@ -41,4 +41,14 @@ calculatorBtn.addEventListener("click", (event) => {
         }
     }
     output.textContent = resultad.toString();
+}
+calculatorBtn.addEventListener("click", (event) => {
+    event.preventDefault();
+    handleCalculated();
 });
+mainContainer === null || mainContainer === void 0 ? void 0 : mainContainer.addEventListener('keydown', (event) => {
+    if (event.key === 'Enter') {
+        handleCalculated();
+    }
+});
+//# sourceMappingURL=script.js.map

@@ -5,17 +5,17 @@ const number2 = document.querySelector("#number2") as HTMLInputElement;
 const calculatorBtn = document.querySelector("#calculator") as HTMLButtonElement;
 const output = document.querySelector("output") as HTMLOutputElement;
 
-let resultad: number = 0;
+const mainContainer = document.querySelector<HTMLElement>('.calculator')
+let resultad: number | string = 0;
+const operations = document.querySelector("input[name='operations']:checked") as HTMLInputElement;
 
-calculatorBtn.addEventListener("click", (event) => {
-	event.preventDefault();
 
-	const operations = document.querySelector("input[name='operations']:checked") as HTMLInputElement;
+function onSubmit(): void {
 	let valueOperations = operations.value;
 	let num1: number = number1.valueAsNumber;
 	let num2: number = number2.valueAsNumber;
 
-	switch(valueOperations) {
+	switch (valueOperations) {
 		case "add": {
 			resultad = add(num1, num2);
 			break;
@@ -53,4 +53,15 @@ calculatorBtn.addEventListener("click", (event) => {
 	}
 
 	output.textContent = resultad.toString();
+}
+calculatorBtn.addEventListener("click", (event) => {
+	event.preventDefault();
+	onSubmit()
 });
+
+
+mainContainer?.addEventListener('keydown', (event) => {
+	if (event.key === 'Enter') {
+		onSubmit()
+	}
+})
