@@ -19,25 +19,67 @@
 				<label class="calculator__label">
 					Number 01:
 
-					<input type="number" class="calculator__number" step="any" required />
+					<input type="number" class="calculator__number" id="number1" step="any" required />
 				</label>
 
 				<label class="calculator__label">
 					Number 02:
 
-					<input type="number" class="calculator__number" step="any" required />
+					<input type="number" class="calculator__number" id="number2" step="any" required />
+				</label>
+
+				<h2 class="calculator__title">Operations:</h2>
+
+				<label class="calculator__label">
+					<input type="radio" name="operations" class="calculator__number" value="add" required />
+
+					Add (+)
+				</label>
+
+				<label class="calculator__label">
+					<input type="radio" name="operations" class="calculator__number" value="substract" />
+
+					Substract (-)
+				</label>
+
+				<label class="calculator__label">
+					<input type="radio" name="operations" class="calculator__number" value="multiply" />
+
+					Multiply (*)
+				</label>
+
+				<label class="calculator__label">
+					<input type="radio" name="operations" class="calculator__number" value="div" />
+
+					Divide (/)
+				</label>
+
+				<label class="calculator__label">
+					<input type="radio" name="operations" class="calculator__number" value="divInt" />
+
+					Divide Integer (//)
+				</label>
+
+				<label class="calculator__label">
+					<input type="radio" name="operations" class="calculator__number" value="remainder" />
+
+					Remainder (%)
 				</label>
 
 				<div class="calculator__btn">
-					<button type="submit" class="calculator_button">Calculator</button>
+					<button type="submit" class="calculator_button" id="calculator">Calculator</button>
 
 					<button type="reset" class="calculator_button">Delete</button>
 				</div>
+
+				<output></output>
 			</form>
 		</main>
 
 		<footer class="site-footer">
 			<small class="site-footer__copyright">&copy; José Nícollas Silva de Souza - All rights reserved - <time datetime="2026" class="site-footer__time">2026</time></small>
 		</footer>
+
+		<script type="module" src="asset/ts/script.ts"></script>
 	</body>
 </html>
