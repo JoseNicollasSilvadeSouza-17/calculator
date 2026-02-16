@@ -1,20 +1,26 @@
 <!doctype html>
 <html lang="en">
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<meta name="description" content="Calculator with TypeScript" />
-		<title>Calculator</title>
-		<meta name="color-scheme" content="light dark" />
-		<link rel="icon" href="favicon.ico" type="image/x-icon" />
-		<link rel="icon" href="asset/images/calculator.svg" type="image/svg+xml" />
-	</head>
-	<body>
-		<header class="site-header">
-			<h1 class="site-header__title">Calculator</h1>
-		</header>
 
-		<main class="calculator">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Calculator with TypeScript" />
+	<title>Calculator</title>
+	<meta name="color-scheme" content="light dark" />
+	<link rel="stylesheet" href="asset/css/style.css">
+	<link rel="icon" href="favicon.ico" type="image/x-icon" />
+	<link rel="icon" href="asset/images/calculator.svg" type="image/svg+xml" />
+</head>
+
+<body>
+	<header class="site-header">
+		<h1 class="site-header__title">Calculator</h1>
+	</header>
+	<main class="calculator">
+		<header class="calculator__header">
+			Calculator x3000
+		</header>
+		<div class="calculator__wrapper">
 			<form class="calculator__form">
 				<label class="calculator__label">
 					Number 01:
@@ -30,41 +36,44 @@
 
 				<h2 class="calculator__title">Operations:</h2>
 
-				<label class="calculator__label">
-					<input type="radio" name="operations" class="calculator__number" value="add" required />
+				<div class="calculator__gridOperations">
+					<label class="calculator__radio">
+						<input type="radio" name="operations" class="calculator__number" value="add" required />
 
-					Add (+)
-				</label>
+						+
+					</label>
 
-				<label class="calculator__label">
-					<input type="radio" name="operations" class="calculator__number" value="substract" />
+					<label class="calculator__radio">
+						<input type="radio" name="operations" class="calculator__number" value="substract" />
 
-					Substract (-)
-				</label>
+						-
+					</label>
 
-				<label class="calculator__label">
-					<input type="radio" name="operations" class="calculator__number" value="multiply" />
+					<label class="calculator__radio">
+						<input type="radio" name="operations" class="calculator__number" value="multiply" />
 
-					Multiply (*)
-				</label>
+						*
+					</label>
 
-				<label class="calculator__label">
-					<input type="radio" name="operations" class="calculator__number" value="div" />
+					<label class="calculator__radio">
+						<input type="radio" name="operations" class="calculator__number" value="div" />
 
-					Divide (/)
-				</label>
+						/
+					</label>
 
-				<label class="calculator__label">
-					<input type="radio" name="operations" class="calculator__number" value="divInt" />
+				</div>
+				<div class="calculator__specialOperations">
+					<label class="calculator__radioSpecial">
+						<input type="radio" name="operations" class="calculator__number" value="divInt" />
 
-					Divide Integer (//)
-				</label>
+						Divide Integer (//)
+					</label>
 
-				<label class="calculator__label">
-					<input type="radio" name="operations" class="calculator__number" value="remainder" />
-
-					Remainder (%)
-				</label>
+					<label class="calculator__radioSpecial">
+						<input type="radio" name="operations" class="calculator__number" value="remainder" />
+						Remainder (%)
+					</label>
+				</div>
 
 				<div class="calculator__btn">
 					<button type="submit" class="calculator_button" id="calculator">Calculator</button>
@@ -74,12 +83,15 @@
 
 				<output>0</output>
 			</form>
-		</main>
+		</div>
+	</main>
 
-		<footer class="site-footer">
-			<small class="site-footer__copyright">&copy; José Nícollas Silva de Souza - All rights reserved - <time datetime="2026" class="site-footer__time">2026</time></small>
-		</footer>
+	<footer class="site-footer">
+		<small class="site-footer__copyright">&copy; José Nícollas Silva de Souza - All rights reserved - <time
+				datetime="2026" class="site-footer__time">2026</time></small>
+	</footer>
 
-		<script type="module" src="asset/ts/script.js"></script>
-	</body>
+	<script type="module" src="asset/ts/script.js"></script>
+</body>
+
 </html>
